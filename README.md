@@ -1,15 +1,11 @@
 # 📊 Benchmark Cassandra vs ScyllaDB (YCSB)
-
-Este repositório apresenta um conjunto de benchmarks realizados com recurso ao **Yahoo! Cloud Serving Benchmark (YCSB)** para comparar o desempenho das bases de dados **Apache Cassandra** e **ScyllaDB**.
-
+Este repositório apresenta um conjunto de benchmarks realizados com recurso ao **Yahoo! Cloud Serving Benchmark (YCSB)**, para comparar o desempenho das bases de dados **Apache Cassandra** e **ScyllaDB**.
 O objetivo principal é avaliar métricas como **throughput**, **latência** e **comportamento sob diferentes workloads**, num ambiente controlado.
 
 ---
 
 ## ⚙️ Ambiente de Testes
-
 Os testes foram executados numa máquina virtual (Ubuntu) com a seguinte configuração:
-
 * **CPU**: 2 vCPUs
 * **RAM**: 2 GB
 * **Armazenamento**: SSD (25 GB)
@@ -18,7 +14,6 @@ Os testes foram executados numa máquina virtual (Ubuntu) com a seguinte configu
 ---
 
 ## 🧪 Workloads Testados
-
 Foram utilizados **6 cenários distintos** (fase de carga + 6 workloads padrão do YCSB):
 
 | Workload   | Descrição                            |
@@ -34,17 +29,14 @@ Foram utilizados **6 cenários distintos** (fase de carga + 6 workloads padrão 
 ---
 
 ## 🧠 Análise Técnica
-
-As diferenças de desempenho observadas resultam principalmente das diferenças arquiteturais entre as duas bases de dados:
+As diferenças de desempenho observáveis, resultam principalmente das diferenças arquiteturais entre as duas bases de dados:
 
 ### Apache Cassandra
-
 * Implementada em Java;
 * Dependente da JVM (Garbage Collection);
 * Modelo multi-thread tradicional.
 
 ### ScyllaDB
-
 * Implementada em C++;
 * Modelo **thread-per-core**;
 * Arquitetura **lock-free**;
@@ -53,7 +45,6 @@ As diferenças de desempenho observadas resultam principalmente das diferenças 
 ---
 
 ## 👨‍💻 Autor
-
 Bruno Fonseca
 ISEC – Engenharia Informática
 
